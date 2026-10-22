@@ -1,0 +1,116 @@
+apiVersion: content.astrona.io/v1alpha1
+kind: TrainingPath
+metadata:
+  id: ATP021
+  slug: perses
+  title: "Perses"
+  description: >-
+    The Perses track: one course per domain — fundamentals and percli,
+    multi-pillar datasources and variables, dashboard-as-code with CUE and
+    Go, the open specification and Grafana migration, embedded panels and
+    plugins, and Kubernetes-native operations with the Perses Operator —
+    with readings, ungraded playgrounds and graded hands-on labs that run on
+    your own computer with the Astrona CLI.
+  version: "0.1.0"
+  language: "en"
+  maturity: draft
+  authors:
+    - name: "Paris Nakita Kejser"
+      email: "paris@astrona.io"
+      company: "Astrona.io"
+  tags:
+    - "Perses"
+    - "Dashboards"
+    - "Observability"
+    - "Dashboard as Code"
+    - "CNCF"
+  license: "Apache-2.0"
+
+spec:
+  audience: "Platform and observability engineers who build and run dashboards."
+  difficulty: "Intermediate"
+
+  # There is no official Perses certification exam. The domains and their
+  # weights below are Astrona's own.
+  examPreparation:
+    enabled: false
+
+  prerequisites:
+    - "Working knowledge of Kubernetes, Helm and kubectl."
+    - "Basic PromQL and an idea of metrics, logs and traces."
+    - "A computer that can run the Astrona CLI with Docker or Podman, for the labs."
+
+  learningOutcomes:
+    - "Run Perses and manage its resources with percli, with authentication and roles."
+    - "Connect metrics, logs, traces and profiles, and build dashboards with cascading variables."
+    - "Write dashboards as code in CUE and Go, and lint and apply them from CI."
+    - "Migrate Grafana dashboards to the Perses specification and check the result."
+    - "Embed Perses panels in a React application and write a panel plugin."
+    - "Run dashboards as Kubernetes resources with the Perses Operator and GitOps."
+
+  stages:
+    - id: "ATP021-STG001"
+      title: "Fundamentals, Architecture & percli Setup"
+      description: "What Perses is and its resource model, running and configuring Perses with Helm, and percli with authentication, roles and role bindings."
+      weight: 10
+      maturity: draft
+      content:
+        - ref: ATS106
+          repository: "https://github.com/astrona-io/ATS106"
+          path: "."
+          version: "0.1.0"
+
+    - id: "ATP021-STG002"
+      title: "Multi-Pillar Datasources & Variable Scopes"
+      description: "Prometheus, Loki, Tempo and Pyroscope datasources, global and project scopes, and dashboard variables that cascade across metrics, logs and traces."
+      weight: 20
+      maturity: draft
+      content:
+        - ref: ATS107
+          repository: "https://github.com/astrona-io/ATS107"
+          path: "."
+          version: "0.1.0"
+
+    - id: "ATP021-STG003"
+      title: "Dashboard-as-Code With CUE & Go"
+      description: "Dashboard-as-Code with the CUE and Go SDKs, building with percli dac, and linting and applying dashboards from a CI pipeline."
+      weight: 25
+      maturity: draft
+      content:
+        - ref: ATS108
+          repository: "https://github.com/astrona-io/ATS108"
+          path: "."
+          version: "0.1.0"
+
+    - id: "ATP021-STG004"
+      title: "Open Specification & Grafana Migration"
+      description: "The Perses open dashboard specification compared with Grafana's model, percli migrate, translation limits and checking query parity."
+      weight: 15
+      maturity: draft
+      content:
+        - ref: ATS109
+          repository: "https://github.com/astrona-io/ATS109"
+          path: "."
+          version: "0.1.0"
+
+    - id: "ATP021-STG005"
+      title: "Embedded UI Packages & Plugin Development"
+      description: "The @perses-dev npm packages, embedding Perses panels in a React application, and writing a panel plugin."
+      weight: 15
+      maturity: draft
+      content:
+        - ref: ATS110
+          repository: "https://github.com/astrona-io/ATS110"
+          path: "."
+          version: "0.1.0"
+
+    - id: "ATP021-STG006"
+      title: "Kubernetes-Native Operations & The Perses Operator"
+      description: "The Perses Operator and its custom resources, dashboards and datasources as Kubernetes objects, GitOps with Flux, and tenant isolation."
+      weight: 15
+      maturity: draft
+      content:
+        - ref: ATS111
+          repository: "https://github.com/astrona-io/ATS111"
+          path: "."
+          version: "0.1.0"
