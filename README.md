@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://astrona.io/courses/perses">
+    <img src="https://astrona.io/courses/perses/banner.svg" alt="Perses: course domains on Astrona" width="100%">
+  </a>
+</p>
+
 # ATP021 — Perses
 
 An Astrona **training path**: a course track that groups training series
